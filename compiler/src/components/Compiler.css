@@ -1,0 +1,342 @@
+.compiler-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border-right: 1px solid rgba(148, 163, 184, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 4px 0 18px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.2);
+}
+
+.brand-block h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+.section-label {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.language-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.language-pill,
+.secondary-button,
+.header-button,
+.run-button {
+  appearance: none;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #1f2937;
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.language-pill {
+  width: 100%;
+  text-align: left;
+  padding: 11px 12px;
+  font-weight: 600;
+}
+
+.language-pill:hover,
+.secondary-button:hover,
+.header-button:hover,
+.run-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 70, 229, 0.35);
+}
+
+.language-pill.active {
+  background: rgba(79, 70, 229, 0.08);
+  border-color: rgba(79, 70, 229, 0.38);
+  color: #3730a3;
+  box-shadow: inset 0 0 0 1px rgba(79, 70, 229, 0.08);
+}
+
+.secondary-button,
+.header-button {
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.meta-card {
+  margin-top: auto;
+  background: rgba(79, 70, 229, 0.06);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.status-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #312e81;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.4);
+}
+
+.workspace-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.workspace-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.workspace-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.run-button {
+  padding: 11px 18px;
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  border: none;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 18px 28px rgba(79, 70, 229, 0.2);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.editor-panel,
+.console-panel {
+  min-width: 0;
+}
+
+.editor-panel {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 18px;
+  padding: 14px 14px 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.console-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 6px 12px;
+  color: #475569;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  color: #4338ca;
+  letter-spacing: 0.08em;
+}
+
+.editor-stage {
+  flex: 1;
+  min-height: 420px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.console-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12px 14px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.stdin-card {
+  min-height: 170px;
+}
+
+.stdin-card textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #1f2937;
+  padding: 14px;
+  font: 0.82rem/1.5 "JetBrains Mono", "Fira Code", monospace;
+}
+
+.stdin-card textarea:focus,
+.language-pill:focus,
+.secondary-button:focus,
+.header-button:focus,
+.run-button:focus {
+  outline: 2px solid rgba(79, 70, 229, 0.28);
+  outline-offset: 2px;
+}
+
+.output-card pre,
+.error-card pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 90px;
+  font: 0.82rem/1.6 "JetBrains Mono", "Fira Code", monospace;
+}
+
+.output-card pre {
+  color: #0f172a;
+}
+
+.error-card {
+  background: rgba(254, 242, 242, 0.9);
+  border-color: rgba(239, 68, 68, 0.18);
+}
+
+.error-card.has-error pre {
+  color: #b91c1c;
+}
+
+.error-card pre {
+  color: #b91c1c;
+}
+
+.warning pre {
+  color: #b45309;
+}
+
+@media (max-width: 1050px) {
+  .compiler-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-stage {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .workspace-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .workspace-actions {
+    width: 100%;
+  }
+
+  .header-button,
+  .run-button {
+    flex: 1;
+  }
+}
